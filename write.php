@@ -2,5 +2,5 @@
 $table = $_POST['table'];
 $text = stripslashes($_POST['text']);
 $myfile = fopen("$table.sql", "a") or die("Unable to open file!");
-fwrite($myfile, $text);
+fwrite($myfile, "$text\n");
 fclose($myfile);
